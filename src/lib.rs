@@ -55,7 +55,6 @@ impl Config {
 }
 
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    //lifetime scope ide na contents jer query moze samo biti definisan i u pozivu f-je, pa je manji lifetime..
 
     contents.lines().filter(|&ln| ln.contains(query)).collect()
 }
